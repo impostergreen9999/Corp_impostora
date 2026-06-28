@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corp. Impostora</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #1a1a1e;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 3px solid #ff4757;
+            z-index: 1000;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4757;
+            text-decoration: none;
+            text-shadow: 1px 1px #000;
+        }
+        .nav-tabs {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-tabs li {
+            margin-left: 20px;
+        }
+        .nav-tabs a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-tabs a:hover {
+            color: #ff4757;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .game-card {
+            background-color: #1a1a1e;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #2a2a30;
+            margin-top: 20px;
+        }
+        .game-title {
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: #3498db;
+        }
+        .embed-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        iframe {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            background-color: #1a1a1e;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">Corp. Impostora</a>
+        <ul class="nav-tabs">
+            <li><a href="descargas.html" style="color: #ff4757;">Descargas</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECCIÓN DE DESCARGAS EXCLUSIVA -->
+    <section class="section">
+        <div class="game-card">
+            <h2 class="game-title">Figure´s World</h2>
+            <p>Acompaña a Frank cubo, Oscar circulo y José triangulo en una gran aventura para descubrir los secretos de la misteriosa guerra de las figuras y la mina de la muerte.</p>
+            
+            <div class="embed-container">
+                <iframe frameborder="0" src="https://itch.io" width="552" height="167"><a href="https://itch.io">Figure´s World by Corp. Impostora</a></iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Corp. Impostora. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
