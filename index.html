@@ -191,11 +191,30 @@
                 <li class="rule-item">4 - No intentar tener control sobre la pagina.</li>
             </ul>
 
-            <!-- Sección de correos dentro de la misma tarjeta -->
+                        <!-- Sección de contacto con función de copiado automático -->
             <div class="contact-section">
                 Cualquier consulta o informe mándenos información a: 
-                <a href="mailto:impostergreen9999@gmail.com" class="contact-link">impostergreen9999@gmail.com</a>
+                <span onclick="copiarCorreo(this)" class="contact-link" style="cursor: pointer;" title="Haz clic para copiar">impostergreen9999@gmail.com</span>
             </div>
+
+            <script>
+            function copiarCorreo(elemento) {
+                var texto = elemento.innerText;
+                navigator.clipboard.writeText(texto).then(function() {
+                    // Guarda el texto original
+                    var textoOriginal = elemento.innerText;
+                    // Cambia temporalmente el texto para avisar al usuario
+                    elemento.innerText = "¡Copiado al portapapeles!";
+                    elemento.style.color = "#2ed573"; // Se pone verde temporalmente
+                    
+                    setTimeout(function() {
+                        elemento.innerText = textoOriginal;
+                        elemento.style.color = "#ff4757"; // Vuelve a su color rojo original
+                    }, 1500);
+                });
+            }
+            </script>
+
         </div>
 
     </section>
