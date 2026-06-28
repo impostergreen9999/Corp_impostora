@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corp. Impostora</title>
+    
+    <!-- LÍNEA PARA EL LOGO DE LA PÁGINA (FAVICON) -->
     <link rel="icon" type="image/png" href="favicon.png">
+    
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,16 +54,103 @@
             color: #ff4757;
         }
         .section {
-            padding: 80px 20px;
+            padding: 40px 20px;
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
+
+        /* Estilos específicos para el Inicio */
+        .main-title {
+            font-size: 3rem;
+            color: #ff4757; /* Grande y en rojo */
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .corp-logo {
+            max-width: 250px; /* Tamaño controlado para tu logo cp.png */
+            height: auto;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #2a2a30;
+        }
+
+        .main-description {
+            color: #ffffff; /* Color blanco centrado */
+            font-size: 1.2rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 30px auto;
+        }
+
+        /* Sección de Reglas */
+        .rules-card {
+            background-color: #1a1a1e;
+            border-radius: 10px;
+            padding: 35px;
+            text-align: left; /* Alineado a la izquierda para mejor lectura */
+            border: 1px solid #2a2a30;
+            margin-top: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .rules-title {
+            font-size: 1.6rem;
+            color: #ff4757;
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #2a2a30;
+            padding-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .rules-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Clase para mantener el espacio "enter space" entre las reglas */
+        .rule-item {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 25px; /* Espacio de por medio */
+        }
+        
+        .rule-item:last-child {
+            margin-bottom: 0; /* Quita el espacio extra al final de la lista */
+        }
+
+        /* Sección de Contacto/Consultas */
+        .contact-section {
+            margin-top: 30px;
+            border-top: 1px solid #2a2a30;
+            padding-top: 20px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+        }
+
+        .contact-link {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #ff2a3b;
+            text-decoration: underline;
+        }
+
         footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            padding: 20px 0;
+            margin-top: 100px;
+            padding: 20px;
             background-color: #1a1a1e;
             color: #666;
             font-size: 0.9rem;
@@ -78,11 +168,36 @@
         </ul>
     </nav>
 
-    <!-- SECCIÓN DE INICIO EN BLANCO -->
     <section class="section">
-        <!-- Puedes escribir todo tu contenido aquí abajo usando Bloc de Notas -->
         
-        
+        <!-- TITULO GRANDE Y EN ROJO CENTRADO -->
+        <h1 class="main-title">Corp. Impostora</h1>
+
+        <!-- IMAGEN DEL LOGO PRINCIPAL (Asegúrate de que se llame cp.png) -->
+        <img src="cp.png" alt="Logo de Corp. Impostora" class="corp-logo">
+
+        <!-- DESCRIPCIÓN EN BLANCO CENTRADA -->
+        <p class="main-description">
+            Somos una corporación de entertainment y desarrollo, desde crear contenido de YouTube hasta el propio transfondo del mundo de los videojuegos. En esta pagina podras encontrar todo el contenido de esta corporación teniendo todo contenido creado gratis.
+        </p>
+
+        <!-- APARTADO DE REGLAS OFICIALES Y CONTACTO -->
+        <div class="rules-card">
+            <h2 class="rules-title">Reglas oficiales</h2>
+            <ul class="rules-list">
+                <li class="rule-item">1 - No apropiarse de los proyectos (La razon de porque no son open source)</li>
+                <li class="rule-item">2 - No hacer "hate" a cualquier persona, ya sea la comunidad o la misma corporación.</li>
+                <li class="rule-item">3 - Si haces contenido, recordar darnos créditos.</li>
+                <li class="rule-item">4 - No intentar tener control sobre la pagina.</li>
+            </ul>
+
+            <!-- Sección de correos dentro de la misma tarjeta -->
+            <div class="contact-section">
+                Cualquier consulta o informe mándenos información a: 
+                <a href="mailto:impostergreen9999@gmail.com" class="contact-link">impostergreen9999@gmail.com</a>
+            </div>
+        </div>
+
     </section>
 
     <footer>
