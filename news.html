@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corp. Impostora - News</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121214;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #1a1a1e;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            border-bottom: 3px solid #ff4757;
+            z-index: 1000;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff4757;
+            text-decoration: none;
+            text-shadow: 1px 1px #000;
+        }
+        .nav-tabs {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .nav-tabs li {
+            margin-left: 20px;
+        }
+        .nav-tabs a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-tabs a:hover {
+            color: #ff4757;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Encabezado del Centro de Noticias */
+        .news-main-title {
+            font-size: 2.5rem;
+            color: #ff4757;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        .news-subtitle {
+            color: #a0a0a5;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* Contenedor interactivo de noticias */
+        .news-accordion {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Tarjeta interactiva desplegable */
+        details.news-item {
+            background-color: #1a1a1e;
+            border: 1px solid #2a2a30;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        details.news-item[open] {
+            border-color: #ff4757;
+        }
+
+        /* Título de la noticia (lo que siempre se ve) */
+        summary.news-summary {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            outline: none;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary.news-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        /* Indicador dinámico de apertura */
+        summary.news-summary::after {
+            content: "＋";
+            color: #ff4757;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+        }
+
+        details.news-item[open] summary.news-summary::after {
+            content: "📑";
+        }
+
+        /* Contenido oculto que se despliega */
+        .news-content {
+            margin-top: 15px;
+            color: #e0e0e0;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            border-top: 1px solid #2a2a30;
+            padding-top: 15px;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #1a1a1e;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo">Corp. Impostora</a>
+        <ul class="nav-tabs">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="news.html" style="color: #ff4757;">News</a></li>
+            <li><a href="descargas.html">Descargas</a></li>
+        </ul>
+    </nav>
+
+    <section class="section">
+        
+        <h1 class="news-main-title">Centro de Noticias</h1>
+        <p class="news-subtitle">Haz clic en cualquier noticia para desplegar los detalles oficiales de la corporación.</p>
+
+        <div class="news-accordion">
+
+            <!-- 1. NOTICIA MÁS RECIENTE: SALIDA DE FIGURE'S WORLD b0.3.0 -->
+            <details class="news-item" open>
+                <summary class="news-summary">🆕 Salida de Figure's World b0.3.0</summary>
+                <div class="news-content">
+                    Este es el primer proyecto oficial de la Corp. Impostora teniendo una historia única inspirado gracias a algunos juegos conocidos. Al ser una beta sigue en desarrollo constante así que si no se actualiza durante un buen tiempo es porque viene la siguiente update. ¡Así que ve a descubrir lo que trae la mina de la muerte!
+                </div>
+            </details>
+
+            <!-- 2. NOTICIA: SALIDA DE SUS MOD -->
+            <details class="news-item">
+                <summary class="news-summary">📦 Salida de Sus mod - Corp. Impostora</summary>
+                <div class="news-content">
+                    Este es el primer mod de Minecraft de la Corp. Impostora así que estén conscientes de que posiblemente tenga bugs o cosas así. Al ser la primera vez trabajando en código de Java tendrá sus cosas pero por ahora ya está cancelado su trabajo. Recuerden revisar en CurseForge (Enlace en el inicio de la web).
+                </div>
+            </details>
+
+            <!-- 3. NOTICIA: SALIDA DE FIGURE'S RUN -->
+            <details class="news-item">
+                <summary class="news-summary">🏃 Salida de Figure's Run</summary>
+                <div class="news-content">
+                    Anunciamos la versión final y fuera de desarrollo del minijuego de Figure's World de nuestra Corp. Impostora. Si se preguntan por qué es otra app independiente es porque al ser un minijuego tenía que tener ciertas cosas que no son parte de Figure's World. ¡Así que ve a por esos puntos!
+                </div>
+            </details>
+
+            <!-- 4. NOTICIA MÁS ANTIGUA: ANUNCIAMIENTO DE ESTA WEB -->
+            <details class="news-item">
+                <summary class="news-summary">🌐 Anunciamiento de esta web</summary>
+                <div class="news-content">
+                    En esta web podrás encontrar toda la información sobre la corporación impostora donde encontrarás nuestros proyectos. Tomar en cuenta que esta web seguirá en desarrollo y actualizaciones. Si la página dice "Not Found (Error 404)" entonces revisa el canal de YouTube por el enlace actualizado o espera a que sea actualizado.
+                </div>
+            </details>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Corp. Impostora. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
