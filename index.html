@@ -217,6 +217,43 @@
         .btn-itchio:hover {
             box-shadow: 0 0 15px rgba(250, 92, 92, 0.5);
         }
+        /* Contenedor principal que alinea las dos cajas */
+.mission-vision-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Hace que se pongan uno abajo del otro en celulares */
+}
+
+/* Estilo individual para cada recuadro (Misión y Visión) */
+.mv-card {
+    background-color: #1a1a1e;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid #2a2a30;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: left; /* Alineado a la izquierda para mejor lectura */
+    flex: 1; /* Hace que ambas cajas ocupen el mismo ancho */
+    min-width: 280px; /* Evita que se encojan demasiado en pantallas chicas */
+}
+
+.mv-title {
+    font-size: 1.5rem;
+    color: #ff4757;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #2a2a30;
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+
+.mv-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin: 0;
+}
+
         footer {
             margin-top: 100px;
             padding: 20px;
@@ -249,6 +286,26 @@
         <p class="main-description">
             Somos una corporación de entertainment y desarrollo, desde crear contenido de YouTube hasta el propio transfondo del mundo de los videojuegos. En esta pagina podras encontrar todo el contenido de esta corporación teniendo todo contenido creado gratis.
         </p>
+                <!-- SECCIÓN DE MISIÓN Y VISIÓN (DOS RECUADROS ADAPTATIVOS) -->
+        <div class="mission-vision-container">
+            
+            <!-- RECUADRO DE MISIÓN (IZQUIERDA EN PC) -->
+            <div class="mv-card">
+                <h2 class="mv-title">Nuestra misión</h2>
+                <p class="mv-text">
+                    Nuestra misión es clara, ofrecer un buen entretenimiento a todos los usuarios de la comunidad, desde el que tiene una "PC Patata" hasta el que tiene una "PC Gamer".
+                </p>
+            </div>
+
+            <!-- RECUADRO DE VISIÓN (DERECHA EN PC) -->
+            <div class="mv-card">
+                <h2 class="mv-title">Nuestra visión</h2>
+                <p class="mv-text">
+                    Nos comprometemos a hacer todo lo posible para que toda la comunidad sea aceptada, dando así nuestro trabajo en lo que se pueda de lo que nos pidan desde agregar cosas hechas por ustedes, hasta tener en cuenta a todas las personas que nos quieran ayudar.
+                </p>
+            </div>
+
+        </div>
 
         <!-- APARTADO DE REGLAS OFICIALES Y CONTACTO -->
         <div class="rules-card">
